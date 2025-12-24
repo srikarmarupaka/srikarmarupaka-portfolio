@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Srikar Marupaka | Cyber Security & Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#00ff41', // Matrix Green
+              secondary: '#008F11', // Darker Green
+              dark: '#050505', // Almost Black
+              darker: '#000000', // Pure Black
+              card: '#0a0a0a', // Dark Gray
+              accent: '#003B00', // Deep Green background
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glitch': 'glitch 1s linear infinite',
+              'cursor': 'cursor .75s step-end infinite',
+            },
+            keyframes: {
+              cursor: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #000000;
+        color: #e0e0e0;
+      }
+      
+      h1, h2, h3, h4, h5, h6, .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      
+      /* Hacker Grid Background */
+      .hacker-bg {
+        background-image: linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #003300;
+        border: 1px solid #00ff41;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #005500;
+      }
+      
+      .glass-card {
+        background: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 255, 65, 0.2);
+        box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
+      }
+      
+      .text-glow {
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+      }
+
+      @keyframes draw-check {
+          0% { stroke-dashoffset: 48; }
+          100% { stroke-dashoffset: 0; }
+        }
+        .animate-draw-check {
+          animation: draw-check 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards 0.2s;
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.263.1?deps=react@18.2.0",
+    "framer-motion": "https://esm.sh/framer-motion@10.16.4?deps=react@18.2.0,react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
