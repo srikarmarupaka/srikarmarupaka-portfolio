@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Send, Phone, Linkedin, Github } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
+import Scheduler from '@/components/scheduler';
 
 const Contact = () => {
   return (
@@ -66,10 +67,10 @@ const Contact = () => {
               <div className="pt-8 border-t border-white/10">
                 <h3 className="text-lg font-bold text-white mb-4 font-mono">Connect_Nodes</h3>
                 <div className="flex gap-4">
-                   <a href="#" className="p-3 bg-black rounded-sm border border-white/10 hover:border-primary text-gray-400 hover:text-primary transition-all hover:shadow-[0_0_10px_rgba(0,255,65,0.3)]">
+                   <a href={PERSONAL_INFO.linkedin} className="p-3 bg-black rounded-sm border border-white/10 hover:border-primary text-gray-400 hover:text-primary transition-all hover:shadow-[0_0_10px_rgba(0,255,65,0.3)]">
                      <Linkedin className="w-6 h-6" />
                    </a>
-                   <a href="#" className="p-3 bg-black rounded-sm border border-white/10 hover:border-primary text-gray-400 hover:text-primary transition-all hover:shadow-[0_0_10px_rgba(0,255,65,0.3)]">
+                   <a href={PERSONAL_INFO.github} className="p-3 bg-black rounded-sm border border-white/10 hover:border-primary text-gray-400 hover:text-primary transition-all hover:shadow-[0_0_10px_rgba(0,255,65,0.3)]">
                      <Github className="w-6 h-6" />
                    </a>
                 </div>
@@ -78,7 +79,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -135,6 +136,13 @@ const Contact = () => {
                 <Send className="w-5 h-5" />
               </button>
             </form>
+          </motion.div> */}
+          <motion.div>
+            <Scheduler />
+            {/* <iframe 
+              src="https://calendly.com/srikarmarupaka/15min" 
+              className="w-full h-[950px] bg-black p-3 rounded-sm border border-white/10 hover:border-[#00ff41] transition-all shadow-xl hover:shadow-[0_0_15px_rgba(0,255,65,0.4)] relative"
+            ></iframe> */}
           </motion.div>
         </div>
       </div>

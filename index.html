@@ -80,6 +80,14 @@
       .text-glow {
         text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
       }
+
+      @keyframes draw-check {
+          0% { stroke-dashoffset: 48; }
+          100% { stroke-dashoffset: 0; }
+        }
+        .animate-draw-check {
+          animation: draw-check 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards 0.2s;
+        }
     </style>
   <script type="importmap">
 {
@@ -95,9 +103,10 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
-  </body>
+</body>
 </html>

@@ -99,7 +99,9 @@ const Hero = () => {
           </a>
           
           <a
-            href="#"
+            href="/assets/srikarmarupakaresume.pdf"
+            download
+            target="_blank"
             className="group inline-flex items-center justify-center px-8 py-3 text-base font-bold text-primary bg-transparent border border-primary rounded-sm hover:bg-primary/10 transition-all duration-300 font-mono"
           >
             <Download className="mr-2 w-5 h-5" />
@@ -114,8 +116,8 @@ const Hero = () => {
           className="mt-16 flex space-x-6"
         >
            {[
-            { icon: <Github className="w-6 h-6" />, href: "#" },
-            { icon: <Linkedin className="w-6 h-6" />, href: "#" },
+            { icon: <Github className="w-6 h-6" />, href: PERSONAL_INFO.github },
+            { icon: <Linkedin className="w-6 h-6" />, href: PERSONAL_INFO.linkedin },
             { icon: <Mail className="w-6 h-6" />, href: `mailto:${PERSONAL_INFO.email}` }
            ].map((social, index) => (
              <a 

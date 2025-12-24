@@ -8,16 +8,20 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CustomCursor from './components/customCursor';
+import Services from './components/services';
 
 function App() {
   return (
     <div className="bg-dark min-h-screen text-gray-300 selection:bg-primary selection:text-black hacker-bg">
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />
         <About />
         <Skills />
         <Experience />
+        <Services />
         <Projects />
         <Education />
         <Contact />

@@ -64,9 +64,9 @@ const About = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 relative z-10 rounded-sm overflow-hidden border border-primary/30 bg-black">
                  {/* Glitch effect on hover would be cool here */}
                  <img 
-                    src="https://picsum.photos/400/400?grayscale" 
+                    src="/assets/portfolioimage.jfif" 
                     alt="Srikar Marupaka" 
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 hover:border-primary"
                  />
                  <div className="absolute inset-0 bg-primary/10 pointer-events-none mix-blend-overlay"></div>
                  {/* Scanline */}

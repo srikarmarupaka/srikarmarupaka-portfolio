@@ -1,18 +1,53 @@
 import React from 'react';
-import { Shield, Code, Server, Terminal, Database, Cloud } from 'lucide-react';
+import { Shield, Code, Server, Terminal, Database, Cloud, Crosshair, FileSearch, Lock } from 'lucide-react';
 import { ExperienceItem, ProjectItem, EducationItem, SkillCategory } from './types';
 
+const env = import.meta.env;
+
 export const PERSONAL_INFO = {
-  name: "Srikar Marupaka",
-  title: "Cyber Security Engineer | Full-Stack Developer",
-  location: "Manthani, Telangana - 505185",
-  phone: "+91 8142428053",
-  email: "srikarmarupaka@duck.com",
-  linkedin: "LinkedIn", 
-  github: "GitHub",
-  about: "Passionate techie, skilled in securing information and computer forensics and have proven experience in Web application development & Application Architecture. I am looking forward to enriching my skills in the cybersecurity and forensics field.",
-  freelancing: true,
+  name: env.VITE_PERSONAL_NAME ?? "Srikar Marupaka",
+  title: env.VITE_PERSONAL_TITLE ?? "Cyber Security Engineer | Full-Stack Developer",
+  location: env.VITE_PERSONAL_LOCATION ?? "Manthani, Telangana - 505185",
+  phone: env.VITE_PERSONAL_PHONE ?? "+91 8142428053",
+  email: env.VITE_PERSONAL_EMAIL ?? "srikarmarupaka@duck.com",
+  linkedin: env.VITE_PERSONAL_LINKEDIN ?? "https://www.linkedin.com/in/srikar-marupaka-727157157",
+  github: env.VITE_PERSONAL_GITHUB ?? "https://github.com/srikarmarupaka",
+  about: env.VITE_PERSONAL_ABOUT ?? "Passionate techie, skilled in securing information and computer forensics and have proven experience in Web application development & Application Architecture. I am looking forward to enriching my skills in the cybersecurity and forensics field.",
+  freelancing: env.VITE_PERSONAL_FREELANCING ? env.VITE_PERSONAL_FREELANCING === 'true' : true,
 };
+
+export const SERVICES = [
+  {
+    title: "VAPT_OPERATIONS",
+    icon: <Crosshair className="w-8 h-8 text-[#00ff41]" />,
+    description: "Offensive vulnerability assessment and penetration testing. Identifying critical exploit paths in web apps, networks, and cloud infrastructure (AWS) before adversaries do.",
+    tech: ["Burp Suite", "Metasploit", "Nmap"]
+  },
+  {
+    title: "SECURED_APPLICATION",
+    icon: <Lock className="w-8 h-8 text-[#00ff41]" />,
+    description: "Architecting resilient SaaS platforms with integrated DevSecOps pipelines. Secure API development and microservices protection using Python, Java, and Node.js.",
+    tech: ["DevSecOps", "API Security", "WAF"]
+  },
+  {
+    title: "DIGITAL_FORENSICS",
+    icon: <FileSearch className="w-8 h-8 text-[#00ff41]" />,
+    description: "Digital evidence acquisition and analysis. Custom Linux/Windows artifact collection, memory forensics, and malware analysis for incident response.",
+    tech: ["Autopsy", "Memory Analysis", "Bash/PowerShell"]
+  },
+  {
+    title: "PHISHING_&_PSAT",
+    icon: <Terminal className="w-8 h-8 text-[#00ff41]" />,
+    description: "Simulating sophisticated social engineering attacks to test human firewalls. Conducting comprehensive Phishing Security Awareness Training to harden organizational culture.",
+    tech: ["Social Engineering", "Red Teaming", "Awareness"]
+  },
+  {
+    title: "COMPLIANCE_AUDITS",
+    icon: <Shield className="w-8 h-8 text-[#00ff41]" />,
+    description: "Navigating the regulatory maze. Readiness audits and strategy implementation for major security frameworks to ensure your organization meets global standards.",
+    tech: ["ISO 27001", "GDPR", "SEBI CSCRF"]
+  }
+];
 
 export const SKILLS: SkillCategory[] = [
   {

@@ -10,11 +10,11 @@ const Footer = () => {
           <span className="text-primary">&copy;</span> {new Date().getFullYear()} {PERSONAL_INFO.name}. [System: Active]
         </p>
         
-        <div className="flex items-center text-gray-500 text-xs">
+        {/* <div className="flex items-center text-gray-500 text-xs">
           <span>Executed with</span>
           <Heart className="w-3 h-3 mx-1 text-primary fill-current" />
           <span>using React & Tailwind</span>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
