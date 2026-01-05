@@ -1,0 +1,5 @@
+Contact: mailto:security@srikarmarupaka.online
+Expires: 2026-12-31T23:59:59Z
+Preferred-Languages: en
+Canonical: https://srikarmarupaka.online/.well-known/security.txt
+Policy: https://srikarmarupaka.online/security-policy
