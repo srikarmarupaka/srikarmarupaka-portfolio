@@ -11,6 +11,7 @@ export interface ProjectItem {
   title: string;
   subtitle?: string;
   description: string[];
+  link?: string;
 }
 
 export interface EducationItem {

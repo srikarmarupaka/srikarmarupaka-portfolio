@@ -55,9 +55,11 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <a href="#" className="inline-flex items-center text-sm font-medium text-primary hover:text-white transition-colors font-mono">
-                  [View Source] <ChevronRight className="w-4 h-4 ml-1" />
-                </a>
+                {project.link && (
+                  <a href={project.link} className="inline-flex items-center text-sm font-medium text-primary hover:text-white transition-colors font-mono">
+                    [Check here] <ChevronRight className="w-4 h-4 ml-1" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

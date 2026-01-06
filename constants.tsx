@@ -157,17 +157,20 @@ export const PROJECTS: ProjectItem[] = [
       "Based on Privacy-Preserving Identity Verification in Blockchain Forensics.",
       "Designing complex ZKP circuits with CIRCOM.",
       "Using ZK-Snark (Snarky JS) protocol with Groth16 Proof system."
-    ]
+    ],
+    link: ""
   },
   {
     title: "Digital Health Records",
     subtitle: "B. Tech. Major Project",
-    description: ["Developed a secure system for managing digital health records."]
+    description: ["Developed a secure system for managing digital health records."],
+    link: "https://digitalhealthrecords.netlify.app/"
   },
   {
     title: "Library Management",
     subtitle: "ECIL, Project Intern",
-    description: ["Built a library management system during internship at ECIL."]
+    description: ["Built a library management system during internship at ECIL."],
+    link: "onelibrentals.netlify.app"
   }
 ];
 
