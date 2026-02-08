@@ -30,7 +30,8 @@ const Navbar = () => {
           <div className="flex-shrink-0 flex items-center cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Terminal className="h-6 w-6 text-primary group-hover:text-white transition-colors" />
             <span className="ml-2 text-xl font-bold font-mono text-white tracking-tighter">
-              <span className="text-primary">&gt;</span> Srikar.root
+              {/*   <span className="text-primary">&gt;</span>  */}
+              srikar.root
               <span className="animate-cursor inline-block w-2 h-5 bg-primary ml-1 align-middle"></span>
             </span>
           </div>

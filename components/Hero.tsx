@@ -109,26 +109,32 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1 }}
-          className="mt-16 flex space-x-6"
-        >
-           {[
-            { icon: <Github className="w-6 h-6" />, href: PERSONAL_INFO.github },
-            { icon: <Linkedin className="w-6 h-6" />, href: PERSONAL_INFO.linkedin },
-            { icon: <Mail className="w-6 h-6" />, href: `mailto:${PERSONAL_INFO.email}` }
-           ].map((social, index) => (
-             <a 
-              key={index} 
-              href={social.href}
-              className="p-3 bg-black rounded-sm border border-white/10 hover:border-primary text-gray-400 hover:text-primary hover:shadow-[0_0_15px_rgba(0,255,65,0.3)] transition-all duration-300"
-             >
-               {social.icon}
-             </a>
-           ))}
-        </motion.div>
+        {/* <motion.div
+        
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+           className="w-full max-w-4xl mx-auto mt-12"
+        > */}
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40 hover:opacity-100 transition-opacity duration-500">
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-white font-mono">4+</span>
+                    <span className="text-[10px] text-primary uppercase font-mono">Years Exp.</span>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-white font-mono">5+</span>
+                    <span className="text-[10px] text-primary uppercase font-mono">Critical Pen. tests</span>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-white font-mono">20+</span>
+                    <span className="text-[10px] text-primary uppercase font-mono">Secured Apps</span>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-white font-mono">100%</span>
+                    <span className="text-[10px] text-primary uppercase font-mono">Audit Ready</span>
+                  </div>
+              </div>
+        {/* </motion.div> */}
       </div>
     </section>
   );

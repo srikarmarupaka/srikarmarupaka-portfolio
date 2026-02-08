@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, MapPin, Mail, Phone, Terminal } from 'lucide-react';
+import { User, MapPin, Mail, Phone, Terminal, Linkedin, Github } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const About = () => {
@@ -57,6 +57,26 @@ const About = () => {
                 <span className="font-mono text-sm">Status: <span className="text-primary animate-pulse">Available</span></span>
               </div>
             </div>
+            <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 1 }}
+          className="mt-10 flex space-x-6"
+        >
+           {[
+            { icon: <Github className="w-6 h-6" />, href: PERSONAL_INFO.github },
+            { icon: <Linkedin className="w-6 h-6" />, href: PERSONAL_INFO.linkedin },
+            { icon: <Mail className="w-6 h-6" />, href: `mailto:${PERSONAL_INFO.email}` }
+           ].map((social, index) => (
+             <a 
+              key={index} 
+              href={social.href}
+              className="p-3 bg-black rounded-sm border border-white/10 hover:border-primary text-gray-400 hover:text-primary hover:shadow-[0_0_15px_rgba(0,255,65,0.3)] transition-all duration-300"
+             >
+               {social.icon}
+             </a>
+           ))}
+        </motion.div>
           </div>
           
           <div className="order-1 md:order-2 flex justify-center">
